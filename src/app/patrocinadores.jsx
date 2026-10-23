@@ -1,4 +1,3 @@
-import { sitePath } from "./site-path";
 
 const marcas = [
   { nome: "ABB", src: "/assets/img/logo-patrocinadores/abb.png", href: "https://www.abb.com/global/en" },
@@ -21,7 +20,7 @@ function GrupoMarcas({ duplicado = false }) {
       {marcas.map(({ nome, src, href }) => (
         <div className="marca-patrocinadora" key={nome}>
           <a href={href} target="_blank" rel="noreferrer" aria-label={duplicado ? undefined : `Visitar o site de ${nome}`} tabIndex={duplicado ? -1 : undefined}>
-            <img src={sitePath(src)} alt={duplicado ? "" : nome} />
+            <img src={src} alt={duplicado ? "" : nome} />
           </a>
         </div>
       ))}

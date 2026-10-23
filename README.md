@@ -91,19 +91,6 @@ Abra `http://localhost:3000` no navegador.
 | `npm run build` | Gera a versão de produção. |
 | `npm run start` | Inicia a versão de produção após o build. |
 
-## Publicar no GitHub Pages
-
-O projeto está configurado para gerar um site estático na pasta `out/`. O workflow `.github/workflows/deploy-pages.yml` compila e publica automaticamente a cada push na branch `main`.
-
-1. Envie o repositório para o GitHub mantendo a branch `main`.
-2. No repositório, abra **Settings → Pages** e escolha **GitHub Actions** em *Build and deployment*.
-3. Faça um push para `main` ou execute **Deploy to GitHub Pages** pela aba **Actions**.
-4. Acompanhe o workflow; ao concluir, o endereço publicado aparece no ambiente `github-pages` e em **Settings → Pages**.
-
-O workflow define automaticamente o prefixo com o nome do repositório, adequado a sites de projeto como `https://<usuario>.github.io/<repositorio>/`. Os caminhos de imagens, vídeo e links para rotas internas usam esse prefixo durante a compilação. Para testar localmente uma build com o prefixo de produção, defina `NEXT_PUBLIC_BASE_PATH` com `/<nome-do-repositorio>` antes de executar `npm run build`.
-
-O GitHub Pages hospeda apenas arquivos estáticos. A página institucional funciona nesse formato, mas autenticação, API e banco de dados precisarão de hospedagem própria quando forem implementados. A rota `/login/` ainda não existe nesta versão.
-
 ## Estrutura do repositório
 
 ```text

@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { sitePath } from "./site-path";
 
 const REVEAL_DISTANCE = 140;
 
@@ -49,14 +48,14 @@ export default function CabecalhoSupplyCo() {
     >
       <div className="cabecalho__conteudo">
         <a className="cabecalho__logo" href="#inicio" aria-label="Tenken - inicio">
-          <img src={sitePath("/assets/img/logo-site/logo_horizontal.svg")} alt="Tenken" />
+          <img src="/assets/img/logo-site/logo_horizontal.svg" alt="Tenken" />
         </a>
 
         <nav className="cabecalho__navegacao" aria-label="Navegacao principal">
           <a className="cabecalho__link" href="#parceiros">Parceiros</a>
           <a className="cabecalho__link" href="#sobre">Sobre</a>
           <a className="cabecalho__link" href="#fluxo">Fluxo</a>
-          <a className="cabecalho__link" href={sitePath("/login/")}>Acessar</a>
+          <a className="cabecalho__link" href="/login/">Acessar</a>
         </nav>
       </div>
     </header>
