@@ -1,4 +1,5 @@
 import Patrocinadores from "./patrocinadores";
+import CarrosselInstitucional from "./carrossel-institucional";
 
 const etapas = [
     ["01", "Agendamento", "Organize a reserva dos equipamentos e consulte os horários disponíveis."],
@@ -35,6 +36,8 @@ export default function App() {
                         </div>
                     </div>
                 </section>
+
+                <CarrosselInstitucional />
 
                 <section id="fluxo" className="secao-fluxo" aria-labelledby="titulo-fluxo">
                     <div className="container py-5 py-lg-6">

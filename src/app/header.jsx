@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 
 const REVEAL_DISTANCE = 140;
 
-export default function CabecalhoSupplyCo() {
+export default function Header() {
   const headerRef = useRef(null);
 
   useEffect(() => {
