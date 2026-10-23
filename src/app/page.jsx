@@ -1,4 +1,5 @@
 import Patrocinadores from "./patrocinadores";
+import { sitePath } from "./site-path";
 
 const etapas = [
     ["01", "Agendamento", "Organize a reserva dos equipamentos e consulte os horários disponíveis."],
@@ -13,7 +14,7 @@ export default function App() {
         <>
             <section id="inicio" className="secao-destaque" aria-labelledby="titulo-tenken">
                 <video autoPlay muted loop playsInline aria-hidden="true" tabIndex={-1}>
-                    <source src="/assets/videos/video-home.mp4" type="video/mp4" />
+                    <source src={sitePath("/assets/videos/video-home.mp4")} type="video/mp4" />
                 </video>
                 <div className="camada-destaque container-fluid">
                     <p className="texto-destaque"><span className="texto-destaque__ano">EST. 2026</span><span className="texto-destaque__significado">"てんけん"
@@ -51,14 +52,14 @@ export default function App() {
                 <section className="secao-cta">
                     <div className="container py-5 py-lg-6 d-lg-flex align-items-end justify-content-between gap-4">
                         <div><p className="sobretitulo">Comece por aqui</p><h2>Seu laboratório, com mais organização.</h2></div>
-                        <a className="botao-principal" href="/login">Acessar sistema <span aria-hidden="true">↗</span></a>
+                        <a className="botao-principal" href={sitePath("/login/")}>Acessar sistema <span aria-hidden="true">↗</span></a>
                     </div>
                 </section>
             </main>
 
             <footer className="rodape-tenken">
                 <div className="container py-4 d-flex flex-column flex-md-row justify-content-between gap-3">
-                    <a href="#inicio" className="marca-rodape" aria-label="Tenken — voltar ao início"><img src="/assets/img/logo-site/letreiro_tenken.svg" alt="Tenken" /></a>
+                    <a href="#inicio" className="marca-rodape" aria-label="Tenken — voltar ao início"><img src={sitePath("/assets/img/logo-site/letreiro_tenken.svg")} alt="Tenken" /></a>
                     <p className="rodape-tenken__descricao">O Tenken ajuda laboratórios educacionais a acompanhar seus equipamentos em cada etapa. Organize agendamentos, registre inspeções antes e depois do uso e mantenha ocorrências e manutenções no histórico.</p>
                     <div className="rodape-tenken__contato">
                         <h2>Fale com a gente</h2>
