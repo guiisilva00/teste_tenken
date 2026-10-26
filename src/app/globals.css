@@ -228,7 +228,7 @@ a {
 
 .secao-patrocinadores h2,
 .secao-sobre h2,
-.carrossel-institucional h2,
+.carrossel h2,
 .secao-fluxo h2,
 .secao-cta h2 {
   max-width: 850px;
@@ -311,12 +311,12 @@ a {
   line-height: 1.8;
 }
 
-/* Carrossel institucional */
-.carrossel-institucional {
+/* Carrossel  */
+.carrossel {
   background: var(--carbon-black);
 }
 
-.carrossel-institucional__visual {
+.carrossel__visual {
   position: relative;
   min-height: clamp(560px, 48vw, 720px);
   overflow: hidden;
@@ -324,7 +324,7 @@ a {
   background: radial-gradient(ellipse at 20% 45%, rgba(164, 22, 26, .3), transparent 42%), linear-gradient(125deg, #242426, #0b090a 72%);
 }
 
-.carrossel-institucional__visual::after {
+.carrossel__visual::after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -333,7 +333,7 @@ a {
   background: linear-gradient(90deg, rgba(11, 9, 10, .08), rgba(11, 9, 10, .42) 42%, rgba(11, 9, 10, .94) 75%), linear-gradient(0deg, rgba(11, 9, 10, .58), transparent 38%);
 }
 
-.carrossel-institucional__imagem {
+.carrossel__imagem {
   position: absolute;
   z-index: 0;
   inset: 0;
@@ -344,7 +344,7 @@ a {
   filter: saturate(.76);
 }
 
-.carrossel-institucional__placeholder {
+.carrossel__placeholder {
   position: absolute;
   z-index: 0;
   inset: 0;
@@ -373,7 +373,7 @@ a {
   text-transform: uppercase;
 }
 
-.carrossel-institucional__conteudo {
+.carrossel__conteudo {
   position: absolute;
   z-index: 2;
   top: 50%;
@@ -383,7 +383,7 @@ a {
   animation: carrossel-entrada 360ms ease both;
 }
 
-.carrossel-institucional__sobretitulo {
+.carrossel__sobretitulo {
   margin: 0 0 18px;
   color: #df5a5d;
   font-size: 12px;
@@ -392,7 +392,7 @@ a {
   text-transform: uppercase;
 }
 
-.carrossel-institucional__conteudo h2 {
+.carrossel__conteudo h2 {
   margin: 0 0 24px;
   color: var(--white);
   font-size: clamp(2.4rem, 5vw, 5rem);
@@ -400,7 +400,7 @@ a {
   line-height: .99;
 }
 
-.carrossel-institucional__texto {
+.carrossel__texto {
   max-width: 520px;
   margin: 0;
   color: #ded9d9;
@@ -408,7 +408,7 @@ a {
   line-height: 1.75;
 }
 
-.carrossel-institucional__legenda {
+.carrossel__legenda {
   margin: 26px 0 0;
   color: var(--silver);
   font-size: 11px;
@@ -417,7 +417,7 @@ a {
   text-transform: uppercase;
 }
 
-.carrossel-institucional__contador {
+.carrossel__contador {
   position: absolute;
   z-index: 2;
   bottom: 42px;
@@ -428,12 +428,12 @@ a {
   letter-spacing: .12em;
 }
 
-.carrossel-institucional__contador span {
+.carrossel__contador span {
   padding: 0 8px;
   color: var(--mahogany-red-2);
 }
 
-.carrossel-institucional__controles {
+.carrossel__controles {
   position: absolute;
   z-index: 2;
   right: clamp(24px, 6vw, 92px);
@@ -443,7 +443,7 @@ a {
   gap: 20px;
 }
 
-.carrossel-institucional__controles button {
+.carrossel__controles button {
   display: grid;
   width: 44px;
   height: 44px;
@@ -458,18 +458,18 @@ a {
   transition: background 180ms, border-color 180ms;
 }
 
-.carrossel-institucional__controles button:hover {
+.carrossel__controles button:hover {
   border-color: var(--mahogany-red-2);
   background: var(--mahogany-red);
 }
 
-.carrossel-institucional__indicadores {
+.carrossel__indicadores {
   display: flex;
   align-items: center;
   gap: 9px;
 }
 
-.carrossel-institucional__indicadores button {
+.carrossel__indicadores button {
   width: 8px;
   height: 8px;
   padding: 0;
@@ -477,15 +477,22 @@ a {
   background: rgba(245, 243, 244, .46);
 }
 
-.carrossel-institucional__indicadores button[aria-current="true"] {
+.carrossel__indicadores button[aria-current="true"] {
   width: 26px;
   border-radius: 8px;
   background: var(--mahogany-red-2);
 }
 
 @keyframes carrossel-entrada {
-  from { opacity: .45; transform: translate(12px, -50%); }
-  to { opacity: 1; transform: translate(0, -50%); }
+  from {
+    opacity: .45;
+    transform: translate(12px, -50%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
 }
 
 .secao-fluxo {
@@ -716,25 +723,73 @@ a {
     outline-offset: 3px;
   }
 
-  .carrossel-institucional__visual { min-height: 690px; }
-  .carrossel-institucional__visual::after { background:linear-gradient(0deg,rgba(11,9,10,.97),rgba(11,9,10,.72) 55%,rgba(11,9,10,.08)); }
-  .carrossel-institucional__conteudo { top:auto; right:24px; bottom:115px; left:24px; width:auto; transform:none; }
-  .carrossel-institucional__conteudo { animation-name: carrossel-entrada-mobile; }
-  .carrossel-institucional__conteudo h2 { font-size:clamp(2.2rem,10vw,3.6rem); }
-  .carrossel-institucional__placeholder { justify-content:flex-start; padding:100px 24px; }
-  .placeholder__marca { font-size:clamp(12rem,60vw,20rem); }
-  .carrossel-institucional__contador { bottom:38px; left:24px; }
-  .carrossel-institucional__controles { right:18px; bottom:25px; gap:10px; }
-  .carrossel-institucional__controles button { width:40px; height:40px; }
-  .carrossel-institucional__indicadores { display:none; }
+  .carrossel__visual {
+    min-height: 690px;
+  }
+
+  .carrossel__visual::after {
+    background: linear-gradient(0deg, rgba(11, 9, 10, .97), rgba(11, 9, 10, .72) 55%, rgba(11, 9, 10, .08));
+  }
+
+  .carrossel__conteudo {
+    top: auto;
+    right: 24px;
+    bottom: 115px;
+    left: 24px;
+    width: auto;
+    transform: none;
+  }
+
+  .carrossel__conteudo {
+    animation-name: carrossel-entrada-mobile;
+  }
+
+  .carrossel__conteudo h2 {
+    font-size: clamp(2.2rem, 10vw, 3.6rem);
+  }
+
+  .carrossel__placeholder {
+    justify-content: flex-start;
+    padding: 100px 24px;
+  }
+
+  .placeholder__marca {
+    font-size: clamp(12rem, 60vw, 20rem);
+  }
+
+  .carrossel__contador {
+    bottom: 38px;
+    left: 24px;
+  }
+
+  .carrossel__controles {
+    right: 18px;
+    bottom: 25px;
+    gap: 10px;
+  }
+
+  .carrossel__controles button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carrossel__indicadores {
+    display: none;
+  }
+
   .etapa {
     min-height: 190px;
   }
 }
 
 @keyframes carrossel-entrada-mobile {
-  from { opacity: .45; }
-  to { opacity: 1; }
+  from {
+    opacity: .45;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 370px) {
@@ -772,6 +827,7 @@ a {
     animation: none;
   }
 }
+
 ::selection {
   background: var(--mahogany-red);
   color: var(--white);

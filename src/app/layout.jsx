@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
-import Header from "./header";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 export const metadata = {
   title: "Tenken",
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
